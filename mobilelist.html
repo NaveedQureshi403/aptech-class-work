@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .qw{
+        background-color: blueviolet;
+    }
+</style>
+</head>
+<body class="qw">
+    <table border="1px">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Price</td>
+                <td>RAM</td>
+                <td>ROM</td>
+                <td>OS</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        var mobiles = [
+            {model:"6pro",price: 1100000,image:"", ram: "8GB", rom:"128GB", os:"Android 11"},
+            {model:"mt",price: 1200000,image:"", ram: "8GB", rom:"64GB", os:"Android 11"},
+            {model:"2pro",price: 1300000,image:"", ram: "8GB", rom:"256GB", os:"Android 11"},
+            {model: "Google Pixel 7",price: 1400000,image:"", ram: "8GB", rom:"32GB", os:"Android 11"},
+            {model:"Google Pixel 8",price: 1500000, image:"",ram: "8GB", rom:"16GB", os:"Android 11"},
+        ]
+
+        var data = document.querySelector('tbody');
+
+        for(i=0; i < mobiles.length; i++){
+            data.innerHTML += "<td>"<img src='"+ mobiles[i].image + "'/> "</td>"
+                               +"<td>"+ mobiles[i].price +"</td>" 
+                +"<td>"+ mobiles[i].ram + "</td>"+"<td>"+ mobiles[i].rom + "</td>"+"<td>"+ mobiles[i].os + "</td>";
+        }
+    </script>
+</body>
+</html>
